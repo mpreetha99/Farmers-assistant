@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>farmer's assistant</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #008000;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #00FF00;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+h2{ color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px red;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #008000;
+  border: none;
+  color: #000000 ;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;  position: absolute;
+  top: 70%;
+  left: 90%;
+  transform: translate(-370%, 50%);
+  -ms-transform: translate(-50%, -50%);
+  
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.dropbtn {
+  background-color: #008000;
+  color: white;
+  padding: 16px;
+  font-size: 29px;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+   position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-2%, 50%);
+  -ms-transform: translate(-50%, -50%);
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #008000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;}
+body {
+  background-color: lightgreen;
+}
+    html { 
+  background: url(https://upload.wikimedia.org/wikipedia/commons/7/74/Flickr_-_Nicholas_T_-_Cash_Crop.jpg) no-repeat center fixed; 
+  background-size: cover;
+}
+
+body { 
+  color: white; 
+}
+
+</style>
+
+
+
+
+
+</head>
+<body>
+
+
+<header>
+  <h2>FARMER'S ASSISTANT</h2>
+</header>
+
+<button class="button" style="vertical-align:middle"><span>START </span></button>
+<div class="dropdown">
+  <button class="dropbtn">CHOOSE A CROP</button>
+  <div class="dropdown-content">
+  <a href="#">RICE</a>
+  
+  </div>
+</div>
+
+
+</body>
+</html>
